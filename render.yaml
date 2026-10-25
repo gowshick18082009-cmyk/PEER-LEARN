@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: peerlearn
+    runtime: node
+    plan: starter
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    disk:
+      name: peerlearn-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: NODE_VERSION
+        value: 22.23.4
+      - key: NODE_ENV
+        value: production
+      - key: DB_PATH
+        value: /var/data/peerlearn.db
+      - key: JWT_SECRET
+        generateValue: true

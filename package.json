@@ -1,0 +1,11 @@
+{
+  "name": "peerlearn",
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "build": "npm ci --prefix client --include=dev && npm --prefix client run build && npm ci --prefix server --omit=dev --ignore-scripts",
+    "start": "npm --prefix server start"
+  }
+}
