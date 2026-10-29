@@ -1,4 +1,4 @@
-# summa-
+# Peer learn - Trade your skill-
 
 PeerLearn is the world of skill trading: a lightweight student peer-learning MVP built
 with React, Vite, Express, and SQLite.
